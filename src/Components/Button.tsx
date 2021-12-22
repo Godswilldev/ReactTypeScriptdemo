@@ -1,14 +1,12 @@
-// import React from "react";
-
 interface ButtonProps {
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void;
+  handleClick: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: number,
+    name?: String
+  ) => void;
 }
-const Button = ({ handleClick }: ButtonProps) => {
-  return (
-    <div>
-      <button onClick={(event) => handleClick(event, 1)}>Click</button>
-    </div>
-  );
-};
+const Button = ({ handleClick }: ButtonProps) => (
+  <button onClick={(event) => handleClick(event, 20)}>Click</button>
+);
 
 export default Button;

@@ -33,7 +33,9 @@ const App = () => {
       <Status status="success" />
       <Heading>Greg</Heading>
       <Button
-        handleClick={(event, id) => console.log("Button CLicked", event, id)}
+        handleClick={(event, id, name) =>
+          console.log("Button CLicked", event, id, name)
+        }
       />
     </div>
   );
