@@ -1,6 +1,7 @@
 import Button from "./Components/Button";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
+import Input from "./Components/Input";
 import Person from "./Components/Person";
 import Status from "./Components/Status";
 
@@ -37,6 +38,7 @@ const App = () => {
           console.log("Button CLicked", event, id, name)
         }
       />
+      <Input />
     </div>
   );
 };
