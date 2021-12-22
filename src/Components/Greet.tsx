@@ -1,16 +1,14 @@
-import React from "react";
-
 interface GreetProps {
   name: String;
-  messageCount: Number;
+  messageCount?: Number;
   isLoggedIn: Boolean;
 }
-const Greet = (props: GreetProps) => {
+const Greet = ({ name, isLoggedIn, messageCount = 10 }: GreetProps) => {
   return (
     <div>
-      {props.isLoggedIn ? (
+      {isLoggedIn ? (
         <h1>
-          Welcome {props.name} You have {props.messageCount} unread messages
+          Welcome {name} You have {messageCount} unread messages
         </h1>
       ) : (
         <h1>Welcome Guest</h1>

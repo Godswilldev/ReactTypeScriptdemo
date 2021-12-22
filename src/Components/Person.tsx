@@ -1,16 +1,27 @@
-import React from "react";
 interface PersonProps {
-  personName: {
+  name: {
     first: string;
     last: string;
   };
+  names: {
+    first: string;
+    age: Number;
+  }[];
 }
-const Person = (props: PersonProps) => {
+const Person = ({ name, names }: PersonProps) => {
   return (
     <div>
       <h3>
-        {props.personName.first} {props.personName.last}
+        {name.first} {name.last}
       </h3>
+
+      <>
+        {names.map((name, index) => (
+          <h4 key={index}>
+            {name.first} {name.age}
+          </h4>
+        ))}
+      </>
     </div>
   );
 };
