@@ -1,4 +1,5 @@
 import Button from "./Components/Button";
+import Container from "./Components/Container";
 import Greet from "./Components/Greet";
 import Heading from "./Components/Heading";
 import Input from "./Components/Input";
@@ -39,6 +40,12 @@ const App = () => {
         }
       />
       <Input />
+      <Container
+        style={{
+          border: "10px solid black",
+          padding: "1rem",
+        }}
+      />
     </div>
   );
 };
